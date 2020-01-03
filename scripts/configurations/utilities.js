@@ -127,7 +127,7 @@ function isCordovaAbove(context, version) {
 }
 
 function getAndroidTargetSdk() {
-  var projectPropertiesPath = path.join("platforms", "android", "CordovaLib", "project.properties");
+  var projectPropertiesPath = path.join(platformRoot, "project.properties");
   if (checkIfFolderExists(projectPropertiesPath)) {
     var projectProperties = fs.readFileSync(projectPropertiesPath).toString();
     var lookUp = "target=android-";
